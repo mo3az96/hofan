@@ -42,10 +42,14 @@ header {
                     top: 30px;
                     right: 25px;
                     z-index: 9999;
+                    padding: 0;
 
                     #{$ltr} & {
                         right: auto;
                         left: 25px;
+                        border: none;
+                        margin: 0;
+                        padding: 0;
                     }
 
                     .text {
@@ -116,14 +120,6 @@ header {
         }
     }
 
-    &.menubtn-scroll {
-        background-color: rgba($black, 0.5);
-
-        span {
-            background-color: $fff;
-        }
-    }
-
     &.open {
         box-shadow: none;
 
@@ -157,5 +153,21 @@ header {
         }
 
 
+    }
+
+    &.menubtn-scroll {
+        background-color: rgba($black, 0.5);
+
+        span {
+            background-color: $fff;
+        }
+
+        &.open {
+            background-color: transparent;
+
+            span {
+                background-color: $hover;
+            }
+        }
     }
 }

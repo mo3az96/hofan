@@ -1537,10 +1537,14 @@ html[dir=ltr] .socila-link:last-of-type {
     top: 30px;
     right: 25px;
     z-index: 9999;
+    padding: 0;
   }
   html[dir=ltr] header .top-header .top-link.lang {
     right: auto;
     left: 25px;
+    border: none;
+    margin: 0;
+    padding: 0;
   }
   header .top-header .top-link.lang .text {
     display: none;
@@ -1601,12 +1605,6 @@ html[dir=ltr] .menubtn {
   width: 25px;
   margin: 6px 0;
 }
-.menubtn.menubtn-scroll {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.menubtn.menubtn-scroll span {
-  background-color: #fff;
-}
 .menubtn.open {
   box-shadow: none;
 }
@@ -1633,6 +1631,18 @@ html[dir=ltr] .menubtn.open span:nth-child(2) {
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
+}
+.menubtn.menubtn-scroll {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.menubtn.menubtn-scroll span {
+  background-color: #fff;
+}
+.menubtn.menubtn-scroll.open {
+  background-color: transparent;
+}
+.menubtn.menubtn-scroll.open span {
+  background-color: #dbe4ec;
 }
 
 /*# sourceMappingURL=main.css.map */
