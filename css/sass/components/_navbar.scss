@@ -3,20 +3,45 @@
     align-items: center;
     margin-left: 37px;
 
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 37px;
+    }
+
     @include md {
         margin-left: 20px;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 20px;
+        }
     }
 }
 
 .nav-li {
     margin-left: 24px;
 
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 24px;
+    }
+
     &:last-of-type {
         margin-left: 0;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     @include md {
         margin-left: 15px;
+
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 15px;
+        }
     }
 }
 

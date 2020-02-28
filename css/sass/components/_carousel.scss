@@ -73,6 +73,12 @@
         flex-direction: column;
         padding: 0 130px;
 
+        #{$ltr} & {
+            direction: rtl;
+            // text-align: right;
+            // align-items: flex-end;
+        }
+
         @include xs {
             padding: 0 50px;
             align-items: center;

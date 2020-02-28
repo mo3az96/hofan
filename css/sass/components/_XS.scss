@@ -43,6 +43,11 @@ header {
                     right: 25px;
                     z-index: 9999;
 
+                    #{$ltr} & {
+                        right: auto;
+                        left: 25px;
+                    }
+
                     .text {
                         display: none;
                     }
@@ -87,6 +92,10 @@ header {
     left: 15px;
     z-index: 999;
 
+    #{$ltr} & {
+        right: 15px;
+        left: auto;
+    }
 
 
     @include sm {

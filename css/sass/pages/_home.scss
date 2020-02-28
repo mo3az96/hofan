@@ -11,7 +11,7 @@
     @include xs {
         font-size: 20px;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
     &:after {
@@ -23,6 +23,11 @@
         height: 2px;
         content: "";
         display: block;
+
+        #{$ltr} & {
+            right: auto;
+            left: 0;
+        }
     }
 
     .more {
@@ -43,6 +48,12 @@
         &:after {
             right: 50%;
             transform: translatex(50%);
+
+            #{$ltr} & {
+                right: auto;
+                left: 50%;
+                transform: translatex(-50%);
+            }
         }
     }
 }
@@ -63,6 +74,12 @@
             &:after {
                 right: 50%;
                 transform: translatex(50%);
+
+                #{$ltr} & {
+                    right: auto;
+                    left: 50%;
+                    transform: translatex(-50%);
+                }
             }
         }
     }
@@ -75,64 +92,77 @@
     @include xs {
         flex-direction: column;
     }
+}
 
-    .cat {
-        display: flex;
-        align-items: center;
-        height: 263px;
-        width: 25%;
-        overflow: hidden;
-        position: relative;
-        margin-left: 30px;
-        backface-visibility: hidden;
+.cat {
+    display: flex;
+    align-items: center;
+    height: 263px;
+    width: 25%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 30px;
+    backface-visibility: hidden;
 
-        &:last-of-type {
-            margin-left: 0;
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 30px;
+    }
 
-            @include xs {
-                margin: auto;
-            }
-        }
+    &:last-of-type {
+        margin: 0;
 
         @include xs {
-            width: 263px;
-            margin: 0 auto 15px;
-        }
+            margin: auto;
 
-        img {
-            @include transition(all 0.3s ease-in-out);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            backface-visibility: hidden;
-        }
-
-        &:hover {
-            img {
-                transform: scale(1.1) rotate(2.5deg);
+            #{$ltr} & {
+                margin: auto;
             }
         }
     }
 
-    .cat-name {
-        backface-visibility: hidden;
-        height: 60px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba($black, 0.6);
-        font-size: 16px;
-        color: $fff;
-        font-family: bold;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include transition(all 0.3s ease-in-out);
+    @include xs {
+        width: 263px;
+        margin: 0 auto 15px;
 
-        &:hover {
-            background-color: $red;
+        #{$ltr} & {
+            margin: 0 auto 15px;
         }
+    }
+
+    img {
+        @include transition(all 0.3s ease-in-out);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        backface-visibility: hidden;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.1) rotate(2.5deg);
+        }
+    }
+}
+
+.cat-name {
+    backface-visibility: hidden;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, 0.6);
+    font-size: 16px;
+    color: $fff;
+    font-family: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        background-color: $red;
     }
 }
 
@@ -175,6 +205,11 @@
             right: 11px;
             width: 50px;
             height: 50px;
+
+            #{$ltr} & {
+                left: 11px;
+                right: auto;
+            }
         }
     }
 
@@ -209,6 +244,11 @@
         padding-left: 85px;
         flex-direction: column;
         position: relative;
+
+        #{$ltr} & {
+            padding-left: 30px;
+            padding-right: 85px;
+        }
 
         @include xs {
             width: 100%;
@@ -256,6 +296,11 @@
         color: $fff;
         background-color: $blue;
         @include transition(all 0.3s ease-in-out);
+
+        #{$ltr} & {
+            left: auto;
+            right: 0;
+        }
 
         &:after {
             content: "\f053";

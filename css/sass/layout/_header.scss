@@ -28,6 +28,11 @@ header {
         color: $fff;
         @include transition(all 0.3s ease-in-out);
 
+        #{$ltr} & {
+            margin-left: 0;
+            margin-right: 13px;
+        }
+
         &:hover {
             color: $hover;
         }
@@ -37,6 +42,15 @@ header {
             margin-right: 12px;
             padding-right: 20px;
             border-right: 1px solid $fff;
+
+            #{$ltr} & {
+                margin-left: 12px;
+                margin-right: 0;
+                border: none;
+                padding: 0;
+                padding-left: 20px;
+                border-left: 1px solid $fff;
+            }
         }
     }
 

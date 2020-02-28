@@ -70,8 +70,18 @@ footer {
         &:nth-of-type(n+5) {
             margin-right: 130px;
 
+            #{$ltr} & {
+                margin-right: 0;
+                margin-left: 130px;
+            }
+
             @include sm {
                 margin-right: 0;
+
+                #{$ltr} & {
+                    margin-right: 0;
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -110,6 +120,10 @@ footer {
 
             transform: translateX(-8px);
             color: $hover;
+
+            #{$ltr} & {
+                transform: translateX(8px);
+            }
         }
     }
 
@@ -146,11 +160,28 @@ footer {
             height: 10px;
             margin-left: 15px;
             font-size: 10px;
+
+            #{$ltr} & {
+                margin-right: 15px;
+                margin-left: 0;
+            }
+
+            &.fas.fa-phone {
+
+                #{$ltr} & {
+                    transform: rotate(90deg);
+
+                }
+            }
         }
 
         &:hover {
             transform: translateX(-8px);
             color: $hover;
+
+            #{$ltr} & {
+                transform: translateX(8px);
+            }
         }
     }
 
@@ -222,8 +253,18 @@ footer {
     margin-left: 20px;
     @include transition(all 0.3s ease-in-out);
 
+    #{$ltr} & {
+        margin-right: 20px;
+        margin-left: 0;
+    }
+
     &:last-of-type {
         margin-left: 0;
+
+        #{$ltr} & {
+            margin-right: 0;
+            margin-left: 0;
+        }
     }
 
     &:hover {

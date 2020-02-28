@@ -16,7 +16,12 @@
     padding: 0 17px;
     color: $fff;
     font-size: 14px;
+    text-align: right;
     @include transition(all 0.3s ease-in-out);
+
+    #{$ltr} & {
+        text-align: left;
+    }
 
     &::placeholder {
         color: #dfdfdf;
@@ -43,6 +48,11 @@
     color: $fff;
     font-size: 14px;
     @include transition(all 0.3s ease-in-out);
+
+    #{$ltr} & {
+        left: auto;
+        right: 15px;
+    }
 
     &:hover {
         color: $red;
