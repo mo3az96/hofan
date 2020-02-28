@@ -1,0 +1,24 @@
+body {
+    position: relative;
+    font-family: itc;
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+        background-color: #dbe4ec;
+        width: 7px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ed1c24;
+    }
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #ed1c24 #dbe4ec;
+}
+
+.overflow {
+    overflow: hidden !important;
+}

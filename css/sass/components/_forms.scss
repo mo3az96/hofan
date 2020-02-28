@@ -1,0 +1,58 @@
+.search-cont {
+    position: relative;
+
+    @include xs {
+        width: 213px;
+        margin: auto;
+    }
+}
+
+.search-input {
+    border-radius: 2px;
+    background-color: rgba($black, 0.251);
+    width: 213px;
+    height: 38px;
+    border: none;
+    padding: 0 17px;
+    color: $fff;
+    font-size: 14px;
+    @include transition(all 0.3s ease-in-out);
+
+    &::placeholder {
+        color: #dfdfdf;
+        font-size: 14px;
+    }
+
+    @include xs {
+        background-color: #f7f7f7;
+        color: $black;
+
+        &::placeholder {
+            color: #bababa;
+        }
+    }
+}
+
+.search-button {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    color: $fff;
+    font-size: 14px;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: $red;
+    }
+
+    @include xs {
+        color: $black;
+
+        &:hover {
+            color: $red;
+        }
+    }
+}

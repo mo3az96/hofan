@@ -1,0 +1,328 @@
+.secs-head {
+    color: $black;
+    font-family: med;
+    font-size: 24px;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @include xs {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &:after {
+        position: absolute;
+        bottom: -18px;
+        right: 0;
+        background-color: $red;
+        width: 25px;
+        height: 2px;
+        content: "";
+        display: block;
+    }
+
+    .more {
+        font-size: 15px;
+        color: #8f8f8f;
+        font-family: bold;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    &.secs-head-center {
+        justify-content: center;
+        text-align: center;
+
+        &:after {
+            right: 50%;
+            transform: translatex(50%);
+        }
+    }
+}
+
+.cats-cont {
+    margin-top: 69px;
+
+    @include xs {
+        margin-top: 40px;
+    }
+
+    .secs-head {
+
+        @include xs {
+            text-align: center;
+            justify-content: center;
+
+            &:after {
+                right: 50%;
+                transform: translatex(50%);
+            }
+        }
+    }
+}
+
+.cats {
+    display: flex;
+    align-items: center;
+
+    @include xs {
+        flex-direction: column;
+    }
+
+    .cat {
+        display: flex;
+        align-items: center;
+        height: 263px;
+        width: 25%;
+        overflow: hidden;
+        position: relative;
+        margin-left: 30px;
+        backface-visibility: hidden;
+
+        &:last-of-type {
+            margin-left: 0;
+
+            @include xs {
+                margin: auto;
+            }
+        }
+
+        @include xs {
+            width: 263px;
+            margin: 0 auto 15px;
+        }
+
+        img {
+            @include transition(all 0.3s ease-in-out);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            backface-visibility: hidden;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1) rotate(2.5deg);
+            }
+        }
+    }
+
+    .cat-name {
+        backface-visibility: hidden;
+        height: 60px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($black, 0.6);
+        font-size: 16px;
+        color: $fff;
+        font-family: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            background-color: $red;
+        }
+    }
+}
+
+.videos-news-cont {
+    margin-top: 69px;
+
+    @include xs {
+        margin-top: 40px;
+    }
+}
+
+.new {
+    display: flex;
+    align-items: center;
+    height: 149px;
+    width: 100%;
+    background-color: #fafafa;
+    border-bottom: 2px solid #f0f0f0;
+    margin: auto;
+    margin-bottom: 11px;
+    position: relative;
+
+    @include xs {
+        height: auto;
+    }
+
+    .date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 120px;
+        height: 100%;
+        color: $fff;
+        background-color: $blue;
+
+        @include xs {
+            position: absolute;
+            top: 11px;
+            right: 11px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .day {
+        font-size: 36px;
+        font-family: bold;
+        display: block;
+        margin-bottom: 5px;
+        line-height: 0.667;
+
+        @include xs {
+            font-size: 24px;
+        }
+    }
+
+    .month {
+        font-size: 18px;
+        font-family: med;
+
+        @include xs {
+            font-size: 12px;
+        }
+    }
+
+    .info {
+        height: 100%;
+        width: calc(100% - 120px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-right: 30px;
+        padding-left: 85px;
+        flex-direction: column;
+        position: relative;
+
+        @include xs {
+            width: 100%;
+            padding: 70px 11px 40px;
+        }
+    }
+
+    .new-name {
+        font-size: 18px;
+        font-family: med;
+        color: $black;
+        margin-bottom: 13px;
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        max-width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        @include transition(all 0.3s ease-in-out);
+
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    .new-desc {
+        font-size: 15px;
+        font-family: light;
+        color: $black;
+        line-height: 1.6;
+    }
+
+    .allnew {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $fff;
+        background-color: $blue;
+        @include transition(all 0.3s ease-in-out);
+
+        &:after {
+            content: "\f053";
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            font-size: 13.26px;
+            @include transition(all 0.3s ease-in-out);
+
+            #{$ltr} & {
+                content: "\f054";
+            }
+        }
+
+        &:hover {
+            background-color: $red;
+
+            &:after {
+                transform: translateX(-3px);
+
+                #{$ltr} & {
+                    transform: translateX(3px);
+                }
+            }
+        }
+    }
+}
+
+.videos {
+    @include sm {
+        margin-top: 40px;
+    }
+}
+
+.video {
+    position: relative;
+    width: 360px;
+    max-width: 100%;
+    height: 219px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 29px;
+
+    @include xs {
+        margin-bottom: 15px;
+    }
+
+    .video-img {
+        @include transition(all 0.3s ease-in-out);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        backface-visibility: hidden;
+    }
+
+    &:hover {
+        .video-img {
+            transform: scale(1.1) rotate(2.5deg);
+        }
+    }
+
+    .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

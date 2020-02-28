@@ -1,0 +1,232 @@
+footer {
+    background-color: $blue;
+    padding-top: 60px;
+    padding-bottom: 74px;
+    margin-top: 47px;
+
+    @include sm {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    .nav-foot-cont {
+        margin-top: 40px;
+
+        @include sm {
+            margin-top: 30px;
+        }
+    }
+
+    .foot-header {
+        font-size: 16px;
+        color: $fff;
+        font-family: bold;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 25px;
+
+        @include sm {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            background-color: $fff;
+            width: 42px;
+            height: 1px;
+            content: "";
+            margin-top: 20px;
+            display: block;
+        }
+    }
+
+    .nav-foot {
+        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height: 130px;
+        width: max-content;
+
+        @include sm {
+            height: auto;
+            flex-wrap: nowrap;
+            padding: 0 15px;
+        }
+    }
+
+    .nav-foot-li {
+        margin-bottom: 15px;
+
+        &:nth-of-type(4n) {
+            margin-bottom: 0;
+
+        }
+
+        @include sm {
+            margin-bottom: 7px;
+        }
+
+        &:nth-of-type(n+5) {
+            margin-right: 130px;
+
+            @include sm {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .nav-foot-link {
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        color: $fff;
+        font-family: light;
+        backface-visibility: hidden;
+        @include transition(all 0.3s ease-in-out);
+
+        &::before {
+            content: "\f0d9";
+            font-weight: 900;
+            font-family: "Font Awesome 5 Free";
+            font-size: 10px;
+            @include transition(all 0.3s ease-in-out);
+            margin-left: 16px;
+
+            #{$ltr} & {
+                content: "\f0da";
+                margin-right: 16px;
+                margin-left: 0;
+            }
+        }
+
+        &:hover {
+            &::before {
+                color: $fff;
+            }
+
+            transform: translateX(-8px);
+            color: $hover;
+        }
+    }
+
+    .contact-foot {
+        display: flex;
+        flex-direction: column;
+
+        @include sm {
+            padding: 0 15px;
+        }
+    }
+
+    .contact-foot-li {
+        margin-bottom: 7px;
+    }
+
+    .contact-foot-link {
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        color: $fff;
+        font-family: light;
+        backface-visibility: hidden;
+        @include transition(all 0.3s ease-in-out);
+
+        i {
+            width: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10px;
+            margin-left: 15px;
+            font-size: 10px;
+        }
+
+        &:hover {
+            transform: translateX(-8px);
+            color: $hover;
+        }
+    }
+
+}
+
+.map {
+    width: 100%;
+    height: 265px;
+
+    @include sm {
+        margin-top: 30px;
+    }
+}
+
+.copyright-cont {
+    margin-top: 57px;
+    min-height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(242, 242, 242, 0.102);
+
+    @include sm {
+        margin-top: 30px;
+    }
+
+    @include sm {
+        padding: 15px 0 5px;
+        flex-direction: column;
+    }
+
+
+    .copytight {
+        display: flex;
+        color: $fff;
+        align-items: center;
+        font-size: 14px;
+
+        img {
+            margin: 0 5px;
+        }
+
+        .tasawk {
+            margin: 0 4px;
+
+            @include xs {
+                margin: 5px 0 0;
+
+            }
+        }
+
+        @include xs {
+            flex-direction: column;
+            justify-content: center;
+            order: 2;
+            margin-top: 10px;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.socila-link {
+    font-size: 14px;
+    color: $fff;
+    margin-left: 20px;
+    @include transition(all 0.3s ease-in-out);
+
+    &:last-of-type {
+        margin-left: 0;
+    }
+
+    &:hover {
+        color: $hover;
+    }
+}

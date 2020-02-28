@@ -1,0 +1,119 @@
+.header-cont {
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &.fixed-header {
+        position: fixed;
+        background-color: $fff;
+        padding: 10px 0;
+
+        .logo {
+            width: 135px;
+        }
+
+        .nav-anchor {
+            color: $black;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        .search-input {
+            background-color: #f7f7f7;
+            color: $black;
+
+            &::placeholder {
+                color: #bababa;
+            }
+        }
+
+        .search-button {
+            color: $black;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
+
+
+.news-bar-cont {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, 0.6);
+    z-index: 8;
+    color: $fff;
+
+    &.fixed-news {
+        background-color: rgba($black, 0.95);
+    }
+
+    .news-bar {
+        display: flex;
+        align-items: center;
+        height: 74px;
+        overflow: hidden;
+
+        @include sm {
+            height: 50px;
+        }
+    }
+
+    .bar-head {
+        border-radius: 2px;
+        background-color: $red;
+        width: 104px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 0;
+            height: 0;
+            display: block;
+            border-width: 8px;
+            border-color: transparent $red transparent transparent;
+            border-style: solid;
+            position: absolute;
+            top: 50%;
+            transform: translatey(-50%);
+            left: -12px;
+        }
+    }
+
+    .marquee {
+        overflow: hidden;
+        direction: ltr;
+        flex: 1;
+        z-index: 1;
+        margin-right: 19px;
+
+
+        a.fixall {
+            color: $fff;
+            font-size: 16px;
+            @include transition(all 0.3s ease-in-out);
+            display: inline-flex;
+            // flex-direction: row-reverse;
+            // align-items: center;
+
+            &:hover {
+                color: $hover;
+            }
+
+            &:before {
+                content: "-";
+                margin: 0 8px;
+                color: $fff;
+            }
+        }
+    }
+}

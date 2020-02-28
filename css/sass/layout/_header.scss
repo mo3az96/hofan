@@ -1,0 +1,67 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    padding-top: 16px;
+
+    .fas.fa-phone {
+        transform: rotate(90deg);
+
+        #{$ltr} & {
+            transform: none;
+        }
+    }
+}
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .top-link {
+        display: flex;
+        align-items: center;
+        margin-left: 13px;
+        font-size: 14px;
+        color: $fff;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover {
+            color: $hover;
+        }
+
+        &.lang {
+            margin-left: 0;
+            margin-right: 12px;
+            padding-right: 20px;
+            border-right: 1px solid $fff;
+        }
+    }
+
+    .text {
+        margin: 0 7px;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        width: 178px;
+        display: block;
+        @include transition(all 0.3s ease-in-out);
+
+        img {
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+}
+
+._2nd-sec {
+    display: flex;
+    align-items: center;
+}
