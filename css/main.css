@@ -1411,6 +1411,18 @@ footer .contact-foot-link:hover {
   header .top-header .top-link {
     display: none;
   }
+  header .top-header .top-link.lang {
+    display: none;
+    border: none;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    z-index: 9999;
+  }
+  header .top-header .top-link.lang .text {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {

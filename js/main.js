@@ -126,7 +126,7 @@ $(document).ready(function () {
 
 
     $('.marquee').marquee({
-        duration: 10000,
+        duration: 9000,
         gap: 9,
         delayBeforeStart: 0,
         direction: document.dir == 'rtl' ? "right" : "left",
@@ -162,7 +162,7 @@ $(document).ready(function () {
     $('.menubtn').click(function () {
         $(this).toggleClass('open');
         $("._2nd-sec").fadeToggle('300');
-        $(".lang").toggleClass('open');
+        $(".lang").toggle();
         $("body").toggleClass("overflow");
     });
 });

@@ -33,6 +33,20 @@ header {
         .top-header {
             .top-link {
                 display: none;
+
+                &.lang {
+                    display: none;
+                    border: none;
+                    margin: 0;
+                    position: absolute;
+                    top: 30px;
+                    right: 25px;
+                    z-index: 9999;
+
+                    .text {
+                        display: none;
+                    }
+                }
             }
         }
     }
