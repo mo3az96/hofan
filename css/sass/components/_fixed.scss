@@ -90,6 +90,12 @@
             top: 50%;
             transform: translatey(-50%);
             left: -12px;
+
+            #{$ltr} & {
+                right: -12px;
+                left: auto;
+                border-color: transparent transparent transparent $red;
+            }
         }
     }
 
@@ -100,6 +106,10 @@
         z-index: 1;
         margin-right: 19px;
 
+        #{$ltr} & {
+            margin-left: 19px;
+            margin-right: 0;
+        }
 
         a.fixall {
             color: $fff;
