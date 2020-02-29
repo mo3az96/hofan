@@ -397,7 +397,7 @@ html[dir=ltr] .nav-li:last-of-type {
 }
 @media (max-width: 767px) {
   .main-slider .text-overlay {
-    padding: 0 50px;
+    padding: 0 30px;
     align-items: center;
     text-align: center;
   }
@@ -765,6 +765,9 @@ html[dir=ltr] .main-slider .en-head {
   position: relative;
   font-size: 18px;
   font-family: bold;
+}
+html[dir=ltr] .news-bar-cont .bar-head {
+  font-size: 16px;
 }
 .news-bar-cont .bar-head:after {
   content: "";
