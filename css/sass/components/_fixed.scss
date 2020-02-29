@@ -75,12 +75,15 @@
     .bar-head {
         border-radius: 2px;
         background-color: $red;
-        width: 104px;
+        width: auto;
+        padding: 0 20px;
         height: 38px;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
+        font-size: 18px;
+        font-family: bold;
 
         &:after {
             content: "";
@@ -117,7 +120,7 @@
 
         a.fixall {
             color: $fff;
-            font-size: 16px;
+            font-size: 18px;
             @include transition(all 0.3s ease-in-out);
             display: inline-flex;
             // flex-direction: row-reverse;

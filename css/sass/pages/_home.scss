@@ -33,7 +33,7 @@
     .more {
         font-size: 15px;
         color: #8f8f8f;
-        font-family: bold;
+        font-family: light;
         @include transition(all 0.3s ease-in-out);
 
         &:hover {
@@ -248,11 +248,16 @@
         #{$ltr} & {
             padding-left: 30px;
             padding-right: 85px;
+
+            @include xs {
+                width: 100%;
+                padding: 70px 11px 50px;
+            }
         }
 
         @include xs {
             width: 100%;
-            padding: 70px 11px 40px;
+            padding: 70px 11px 50px;
         }
     }
 
@@ -282,6 +287,11 @@
         font-family: light;
         color: $black;
         line-height: 1.6;
+
+        @include xs {
+            height: 50px;
+            overflow: hidden;
+        }
     }
 
     .allnew {

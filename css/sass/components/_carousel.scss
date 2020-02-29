@@ -74,7 +74,7 @@
         padding: 0 130px;
 
         #{$ltr} & {
-            direction: rtl;
+            // direction: rtl;
             // text-align: right;
             // align-items: flex-end;
         }
@@ -97,6 +97,7 @@
 
         &.openStyle {
             width: 100%;
+
         }
 
         @include xs {
@@ -120,9 +121,17 @@
         direction: ltr;
         text-align: right;
 
+        #{$ltr} & {
+            text-align: left;
+        }
+
         @include xs {
             font-size: 17px;
             text-align: center;
+
+            #{$ltr} & {
+                text-align: center;
+            }
         }
     }
 }

@@ -39,7 +39,7 @@ header {
                     border: none;
                     margin: 0;
                     position: fixed;
-                    top: 30px;
+                    top: 25px;
                     right: 25px;
                     z-index: 9999;
                     padding: 0;
@@ -52,8 +52,13 @@ header {
                         padding: 0;
                     }
 
+                    img {
+                        display: inline-block;
+                        margin-bottom: 3px;
+                    }
+
                     .text {
-                        display: none;
+                        color: rgba($black, 0.5);
                     }
                 }
             }
