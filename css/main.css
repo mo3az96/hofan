@@ -1660,6 +1660,7 @@ footer .contact-foot-link i {
   height: 10px;
   margin-left: 15px;
   font-size: 10px;
+  backface-visibility: hidden;
 }
 html[dir=ltr] footer .contact-foot-link i {
   margin-right: 15px;
