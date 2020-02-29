@@ -1,0 +1,143 @@
+.bootstrap-select {
+    &:not([class*=col-]) {
+        &:not([class*=form-control]) {
+            &:not(.input-group-btn) {
+                width: 100%;
+            }
+        }
+    }
+
+    &.open {
+        .dropdown-toggle {
+            &.btn-default {
+                color: #a5a5a5;
+                background-color: transparent;
+                outline: none !important;
+                box-shadow: none;
+                border-color: $hover;
+                border-bottom-color: transparent;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: #a5a5a5;
+                    background-color: transparent;
+                    outline: none !important;
+                    box-shadow: none;
+                    border-color: $hover;
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .dropdown-toggle {
+        height: 56px;
+        border: 2px solid #ededed;
+        border-radius: 0;
+        padding: 0 25px;
+        background-color: transparent;
+        color: #a5a5a5;
+        outline: none !important;
+        box-shadow: none;
+        font-family: bold;
+        font-size: 17px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: #a5a5a5;
+            background-color: transparent;
+            outline: none !important;
+            box-shadow: none;
+            border-color: #ededed;
+        }
+
+        .filter-option {
+            float: unset;
+            text-align: unset;
+            padding: 0;
+
+            #{$ltr} & {
+                text-align: left;
+            }
+        }
+
+        .bs-caret {
+            .caret {
+                display: none;
+            }
+
+            &:after {
+                margin: 0 3px;
+                color: #888888;
+                font-size: 13px;
+                content: "\f078";
+                font-weight: 900;
+                font-family: "Font Awesome 5 Free";
+            }
+        }
+    }
+
+    .dropdown-menu {
+        display: block;
+        border: 2px solid $hover;
+        box-shadow: none;
+        border-radius: 0;
+        border-top: none;
+        margin: -2px 0 0;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+
+        &:focus {
+            outline: none;
+        }
+
+        &.inner {
+            li {
+                &:focus {
+                    outline: none;
+                }
+
+                &.active {
+                    a {
+                        background-color: transparent;
+                        color: $red;
+                    }
+                }
+
+                a {
+                    transition: 0.3s;
+                    font-size: 14px;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $red;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bs3 {
+    &.bootstrap-select {
+        .dropdown-toggle {
+            .filter-option {
+                padding: 0;
+            }
+        }
+    }
+}

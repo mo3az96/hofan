@@ -36,6 +36,10 @@
                 color: $red;
             }
         }
+
+        @include xs {
+            position: static;
+        }
     }
 }
 

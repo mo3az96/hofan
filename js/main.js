@@ -165,4 +165,16 @@ $(document).ready(function () {
         $(".lang").toggle();
         $("body").toggleClass("overflow");
     });
+
+    $(window).scroll(function () {
+        if ($(window).width() >= 991) {
+            var scrollVal = $(this).scrollTop();
+            if ($(this).scrollTop() >= 36) {
+                $('.breadcrumb-sec').css('background-position', '0 ' + scrollVal + 'px');
+            } else {
+                $('.breadcrumb-sec').css('background-position', '0 0');
+            }
+        }
+
+    });
 });

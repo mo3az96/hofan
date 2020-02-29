@@ -4,9 +4,17 @@ footer {
     padding-bottom: 74px;
     margin-top: 47px;
 
+    &.page-footer {
+        padding-bottom: 0;
+    }
+
     @include sm {
         padding-top: 20px;
         padding-bottom: 50px;
+
+        &.page-footer {
+            padding-bottom: 0;
+        }
     }
 
     .nav-foot-cont {
