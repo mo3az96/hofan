@@ -397,7 +397,6 @@ html[dir=ltr] .nav-li:last-of-type {
 }
 @media (max-width: 767px) {
   .main-slider .text-overlay {
-    padding: 0 30px;
     align-items: center;
     text-align: center;
   }
