@@ -1534,11 +1534,6 @@ footer.page-footer {
 footer .nav-foot-cont {
   margin-top: 10px;
 }
-@media (max-width: 992px) {
-  footer .nav-foot-cont {
-    margin-top: 20px;
-  }
-}
 footer .foot-header {
   font-size: 16px;
   color: #fff;
