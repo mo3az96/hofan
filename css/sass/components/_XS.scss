@@ -109,7 +109,7 @@ header {
     span {
         width: 25px;
         height: 2px;
-        background-color: $black;
+        background-color: $fff;
         display: flex;
         @include transition(all 0.3s ease-in-out);
         position: relative;
